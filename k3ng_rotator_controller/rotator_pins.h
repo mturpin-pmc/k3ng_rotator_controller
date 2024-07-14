@@ -16,7 +16,7 @@
 #define rotate_cw_pwm 0          // optional - PWM CW output - set to 0 to disable (must be PWM capable pin)
 #define rotate_ccw_pwm 0         // optional - PWM CCW output - set to 0 to disable (must be PWM capable pin)
 #define rotate_cw_ccw_pwm 0      // optional - PWM on CW and CCW output - set to 0 to disable (must be PWM capable pin)
-#define rotate_cw_freq 0         // optional - CW variable frequency output
+#define rotate_cw_freq 0         // optional - CW variable frequency output  - Due: 
 #define rotate_ccw_freq 0        // optional - CCW variable frequency output
 #define button_cw 0              // normally open button to ground for manual CW rotation (schematic pin: A2)
 #define button_ccw 0             // normally open button to ground for manual CCW rotation (schematic pin: A3)

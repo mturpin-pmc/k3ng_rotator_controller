@@ -4,6 +4,10 @@
 
 #include "rotator_debug.h"
 
+#if defined(ARDUINO_SAM_DUE)
+  #include <avr/dtostrf.h>
+#endif
+
 #define FEATURE_ETHERNET
 
 void DebugClass::print(const char *str)

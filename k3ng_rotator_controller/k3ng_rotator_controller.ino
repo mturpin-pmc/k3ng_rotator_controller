@@ -1115,7 +1115,14 @@
 
 
 #include <avr/pgmspace.h>
-#include <EEPROM.h>
+#if !defined(ARDUINO_SAM_DUE)
+  #include <EEPROM.h>
+#else 
+  #include <DueFlashStorage.h>
+  #include <avr/dtostrf.h>
+  #include "due_tone.h"
+#endif
+
 #include <math.h>
 
 #include "rotator_hardware.h"
@@ -9444,7 +9451,7 @@ void output_debug(){
         }
         debug.println(F("DIRTY"));
 
-        #if !defined(TEENSYDUINO)
+        #if !defined(TEENSYDUINO) && !defined(ARDUINO_SAM_DUE)
           void * HP = malloc(4);
           if (HP) {free(HP);}
           unsigned long free = (unsigned long)SP - (unsigned long)HP;
